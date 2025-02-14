@@ -1,14 +1,23 @@
+import os
 import datetime
 import pandas as pd
 from zoho_api import zoho_api
 from tables_comparsion import print_result
 from tg_api import escape_markup, sendMessage
+from dotenv import load_dotenv
+
+load_dotenv()
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+PORTAL = os.getenv("PORTAL")
+PROJECT_NAME = os.getenv("PROJECT_NAME")
+FILE_NAME = os.getenv("FILE_NAME")
 
 handler = zoho_api.ZohoAuthHandler(
-    "1004.DCAJ27VKACCGNEPOYF04EVAR1JYJ6T", "87028a1c9efa37c677293dc02cfa54ac2fadb75669"
+    CLIENT_ID, CLIENT_SECRET
 )
 portals = zoho_api.ZohoDoc(
-    handler, "678002754", "nScan dla PLAY", "Serwery_NQP_V1_08_18_2020.xlsx"
+    handler, PORTAL, PROJECT_NAME, FILE_NAME
 )
 with open("./csv/last_document_flag.txt") as flag_file:
     beforelast_mtime_csv = f"{flag_file.read()}"
