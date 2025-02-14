@@ -1,9 +1,12 @@
+import os
 import httpx
 import re
+from dotenv import load_dotenv
 
-TOKEN = "7770779855:AAFZZVHZGU0hNYroh5Qdo12Ena1gfFpZ1P8"
-TG_API = "https://api.telegram.org"
-PARSE_MODE = "markdownv2"
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
+TG_API = os.getenv("TG_API")
+PARSE_MODE = os.getenv("PARSE_MODE")
 
 
 def escape_markup(text: str, mode: str) -> str:
