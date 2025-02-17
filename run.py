@@ -62,26 +62,26 @@ def run(interval_hours: int = 12):
 
 # Start
 if args.start == "start" and args.first is not True and args.interval is None:
-    sendMessage("Running with 12 hours interval")
+    sendMessage("Running with 12 hours interval...")
     while True:
         run()
 
 # First start
 if args.start == "start" and args.first is True and args.interval is None:
-    sendMessage("Running with 12 hours interval")
+    sendMessage("Running with 12 hours interval...")
     first()
     while True:
         run()
 
 # Start + interval / no first start
 if args.start == "start" and args.interval is not None and args.first is not True:
-    sendMessage(f"Running with {args.interval} hours interval")
+    sendMessage(f"Running with {args.interval} hours interval...")
     while True:
         run(args.interval)
 
 # First start with interval
 if args.start == "start" and args.interval is not None and args.first is True:
-    sendMessage(f"Running with {args.interval} hours interval")
+    sendMessage(f"Running with {args.interval} hours interval...")
     first()
     while True:
         run(args.interval)
