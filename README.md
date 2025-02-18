@@ -74,13 +74,22 @@ Get <b>PORTAL</b> number from Zoho
 
 <h4>Docker Installation</h4>
 
-1. Set the custom update interval before building the Docker image:
+1. Clone the repository:
+  ```sh
+   git clone https://github.com/djoxpy/zohodoc_api.git
+  ```
+2. Navigate to the project directory:
+  ```sh
+   cd zohodoc_api/
+  ```
+
+3. Set the custom update interval before building the Docker image:
 
   ```sh
   CMD ["python", "./run.py", "--first", "--interval", "6", "start"]
   ```
 
-2.  Build the Docker image:
+4.  Build the Docker image:
    ```sh
    docker build -t zohodoc_api .
    ```
