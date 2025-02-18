@@ -2,7 +2,7 @@
 <br/>
 <div>
 
-<h3>ZohoDoc XLSX API</h3>
+<h4>ZohoDoc XLSX API</h4>
 <p>
 This program is designed to automatically download, compare, and analyze data from a Zoho XLSX document, then send the results to Telegram.
 
@@ -47,7 +47,7 @@ Get <b>PORTAL</b> number from Zoho
 
 ### Installation
 
-<h3>Local Installation</h3>
+<h4>Local Installation</h4>
 
 1. Clone the repository:
   ```sh
@@ -72,7 +72,7 @@ Get <b>PORTAL</b> number from Zoho
    FILE_NAME=Template.xlsx
   ```
 
-<h3>Docker Installation</h3>
+<h4>Docker Installation</h4>
 
 1. Set the custom update interval before building the Docker image:
 
@@ -87,7 +87,7 @@ Get <b>PORTAL</b> number from Zoho
 
 ## Usage
 
-   <h3>Local Usage</h3>
+   <h4>Local Usage</h4>
 
    ```sh
    run.py [-h] [--first ] [--interval [12]] start
@@ -107,7 +107,7 @@ Running the program with a custom update interval:
   run.py --interval 12 start
   ```
 
- <h3>Docker Usage</h3>
+ <h4>Docker Usage</h4>
 
 1.  Run the Docker container:
    ```sh
