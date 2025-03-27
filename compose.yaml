@@ -1,0 +1,19 @@
+services:
+  zohodoc_api:
+    image: zohodoc_api:latest
+    container_name: zohodoc_api
+    environment: 
+      - TOKEN=$TOKEN
+      - TG_API=$TG_API
+      - PARSE_MODE=$PARSE_MODE
+      - CLIENT_ID=$CLIENT_ID
+      - CLIENT_SECRET=$CLIENT_SECRET
+      - PORTAL=$PORTAL
+      - PROJECT_NAME=$PROJECT_NAME
+      - FILE_NAME=$FILE_NAME  
+    restart: on-failure
+    volumes:
+      - zohodoc_api_data:/usr/src/zohodoc_api
+
+volumes:
+  zohodoc_api_data:
