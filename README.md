@@ -29,6 +29,7 @@ This project automates the process of downloading, comparing, and analyzing data
 - [Pip](https://pypi.org/project/pip/)
 - [Docker](https://www.docker.com/)
 ## Getting Started
+Get <b>TOKEN</b> using @BotFather (ref: https://core.telegram.org/bots/features#botfather)
 
 Get <b>CLIENT_ID</b> and <b>CLIENT_SECRET</b> from  https://api-console.zoho.com/
 
@@ -63,8 +64,9 @@ Get <b>PORTAL</b> number from Zoho
    source venv/bin/activate
    pip install -r requirements.txt
    ```
-4. Enter your CLIENT_ID, CLIENT_SECRET, PORTAL, PROJECT_NAME, FILE_NAME in the `.env` file:
+4. Enter your TOKEN, CLIENT_ID, CLIENT_SECRET, PORTAL, PROJECT_NAME, FILE_NAME in the `.env` file:
   ```js
+   TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
    CLIENT_ID=1004.DCAJ27VKACCGNEPOYF04EVAR1FU7EW
    CLIENT_SECRET=90496a1c9efa37c677293dc02cfa54ac2fadb92625
    PORTAL=192000692
